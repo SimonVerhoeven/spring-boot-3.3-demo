@@ -5,13 +5,18 @@
 
 Let's take a look at the new observability changes.
 
+== Rabbit
+
+* observations can be enabled for simple/direct/stream listeners, and on `RabbitTemplate ` using <<_new_properties,properties>>.
+
 == Jersey
 
 * Micrometer 1.13+ requires us to add a dependency on `org.glassfish.jersey.ext:jersey-micrometer` as the Jersey support has been deprecated.
-*  `MetricsApplicationEventListener` has been replaced by `ObservationApplicationEventListener`
+* `MetricsApplicationEventListener` has been replaced by `ObservationApplicationEventListener`
 * tag customization is now handled through a `JerseyObservationConvention` bean rather than `JerseyTagsProvider`
 
 
+[#_new_properties]
 == New properties
 
 We've once again received some observability enhancements.
