@@ -22,6 +22,10 @@ Let's take a look at the new observability changes.
 
 == Brave
 ** support for tagged and local fields has been added
+** upgrade to 6.0
+
+== Zipkin
+** upgrade to 3.0 thus enabling us to: define different encodings, dynamic endpoint sources, ...
 
 [#_new_properties]
 == New properties
@@ -29,7 +33,11 @@ Let's take a look at the new observability changes.
 We've once again received some observability enhancements.
 [cols="1,1,1"]
 |===
-|Name | Default Value | Description
+|Name | Default value | Description
+
+| management.info.process.enabled
+| false
+| Whether to enable the *new* process `InfoContributor`.
 
 | spring.rabbitmq.listener.direct.observation-enabled
 | false
@@ -46,5 +54,23 @@ We've once again received some observability enhancements.
 | spring.rabbitmq.template.observation-enabled
 | false
 | Whether to enable observation.
+|===
+
+== Changed properties
+[cols="1,1,1,1"]
+|===
+|Name | New value | Previous value
+
+| spring.pulsar.listener.observation-enabled
+| false
+| true
+
+| spring.pulsar.template.observations-enabled
+| false
+| true
 
 |===
+
+== Varia
+
+While not directly observability related, do keep in mind in case you're using gradle, and the native build tools to build your project for GraalVM you'll need to make certain you're using at least version 0.10.0 of the plugin.
