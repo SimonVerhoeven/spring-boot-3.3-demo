@@ -27,6 +27,11 @@ Let's take a look at the new observability changes.
 == Zipkin
 ** upgrade to 3.0 thus enabling us to: define different encodings, dynamic endpoint sources, ...
 
+== Prometheus
+Micrometer 1.13 has a new `micrometer-registry-prometheus-simpleclient` module, and uses the 0.16.* version of the Prometheus Java Client. The existing `micrometer-registry-prometheus` module uses the 1.* generation which is *not yet supported by Spring Boot*, so don't forget to switch to the latter module with the former!
+
+If you don't the auto-configuration won't work!
+
 [#_new_properties]
 == New properties
 
