@@ -59,6 +59,10 @@ We've once again received some observability enhancements.
 | spring.rabbitmq.template.observation-enabled
 | false
 | Whether to enable observation.
+
+| management.observations.long-task-timer.enabled
+| false
+| Whether a LongTaskTimer should be created for every observation.
 |===
 
 == Changed properties
