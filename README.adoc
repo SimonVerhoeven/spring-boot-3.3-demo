@@ -87,3 +87,11 @@ We've once again received some observability enhancements.
 == Varia
 
 While not directly observability related, do keep in mind in case you're using Gradle, and the native build tools to build your project for GraalVM you'll need to make certain you're using at least version 0.10.0 of the plugin.
+
+== Conclusion
+
+As always, there are a lot of interesting enhancements observability wise.
+I can highly recommend using the https://digma.ai[Digma] plugin to easily view your ingested observation in IntelliJ.
+
+I also recommend perusing the https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-3.3-Release-Notes[Spring Boot 3.3 release notes].
+
