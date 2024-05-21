@@ -3,10 +3,14 @@
 :toc-placement:
 :toclevels: 3
 
-Let's take a look at the new observability changes.
+Spring Boot 3.3 is releasing on the 23th of May 2024, and one again it contains a lot of useful observability changes.
+
+Observability being a key focus for the Spring team, and production ready application was once again underscored during the latest https://www.youtube.com/watch?v=isAqJYBQz1A[Spring Office Hours] hosted by Dan Vega, Jonathan Ivanov and Tommy Ludwig.
+
+So let's take a look at the new observability changes.
 
 == Rabbit
-* observations can be enabled for simple/direct/stream listeners, and on `RabbitTemplate ` using <<_new_properties,properties>>.
+* observations can be enabled for simple/direct/stream listeners, and on `RabbitTemplate` using <<_new_properties,properties>>.
 
 == Jersey
 * Micrometer 1.13+ requires us to add a dependency on `org.glassfish.jersey.ext:jersey-micrometer` as the Jersey support has been deprecated.
@@ -82,4 +86,4 @@ We've once again received some observability enhancements.
 
 == Varia
 
-While not directly observability related, do keep in mind in case you're using gradle, and the native build tools to build your project for GraalVM you'll need to make certain you're using at least version 0.10.0 of the plugin.
+While not directly observability related, do keep in mind in case you're using Gradle, and the native build tools to build your project for GraalVM you'll need to make certain you're using at least version 0.10.0 of the plugin.
