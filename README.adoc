@@ -32,9 +32,9 @@ So let's take a look at the new observability changes.
 ** upgrade to 3.0 thus enabling us to: define different encodings, dynamic endpoint sources, ...
 
 == Prometheus
-Micrometer 1.13 has a new `micrometer-registry-prometheus-simpleclient` module, and uses the 0.16.* version of the Prometheus Java Client. The existing `micrometer-registry-prometheus` module uses the 1.* generation which is *not yet supported by Spring Boot*, so don't forget to switch to the latter module with the former!
+Spring boot 3.3 now supports the https://github.com/prometheus/client_java/releases/tag/v1.0.0[Prometheus 1.* client]. Do note that it contains some breaking changes such as the exported metric names, and the use of the https://github.com/prometheus/pushgateway[Prometheus push gateway] is not supported yet.
 
-If you don't the auto-configuration won't work!
+If this poses an impediment and you want to continue using the 0.* version then you should remove the `io.micrometer:micrometer-registry-prometheus` and add `io.micrometer:micrometer-registry-prometheus-simpleclient`.
 
 [#_new_properties]
 == New properties
